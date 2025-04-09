@@ -103,6 +103,10 @@ if command -v docker 2>&1 >/dev/null; then
     FPATH="$docker_completions_directory:$FPATH"
 fi
 
+# Add kubectl completions if the kubectl command is installed (https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#enable-shell-autocompletion)
+if command -v kubectl 2>&1 >/dev/null; then
+    source <(kubectl completion zsh)
+fi
 
 # pyenv config
 if command -v pyenv 2>&1 >/dev/null; then
