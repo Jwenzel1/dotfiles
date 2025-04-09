@@ -6,3 +6,4 @@ noremap <right> <nop>
 set expandtab
 set autoindent
 set smartindent
+set number
